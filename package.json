@@ -1,11 +1,16 @@
 {
   "name": "token-service",
   "version": "1.0.0",
+  "description": "Servicio de tokens con whitelist de UIDs",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
