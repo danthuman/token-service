@@ -25,7 +25,7 @@ app.post("/token", async (req, res) => {
   if (allowedUIDs.includes(uid)) {
     // Genera un token simulado
     const token = `token-${uid}-${Date.now()}`;
-    const finalUrl = `https://vix.com/es-es/${token}`;
+    const finalUrl = `https://vix.com/es-es?token=${token}`;
 
     return res.json({
       uid,
@@ -36,7 +36,7 @@ app.post("/token", async (req, res) => {
     // UID no permitido → fallback
     return res.json({
       uid,
-      fallback: "https://www.google.com"
+      fallback: "https://www.yahoo.com"
     });
   }
 });
